@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Demo</title>
 
-    <style>
-        .thumbnail{
-            width: 300px;
-            border-radius: 12px;
-            display: block;
-        }
+  <style>
+    .thumbnail {
+      width: 300px;
+      border-radius: 7px;
+      display: block;
+    }
 
-        .search-bar{
-            font-size: 20px;
-            display: block;
-        }
+    .search-bar {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
 
-        .video-title{
-            width: 200px;
-        }
+    .video-title {
+      font-weight: bold;
+      margin: 0;
+    }
 
-        .div-preview{
-            width: 300px;
-            display: inline-block;
-        }
+    .video-author, .video-stats {
+      color: rgb(122, 122, 122);
+      margin: 0px 0;
+      font-size: 12px
+    }
 
-    </style>
+    .div-preview {
+      width: 300px;
+      display: inline-block;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
+    .video-details {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 8px;
+    }
+
+    .channel-picture {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+
+  </style>
 </head>
 <body>
-    <input class="search-bar" type="text" placeholder="Search">
 
-    <div class="div-preview">
+  <input class="search-bar" type="text" placeholder="Search">
+
+  <div class="div-preview">
+
+    <div class="video-thumbnail">
         <img src="thumbnail_01.png" class="thumbnail">
-
-        <p class="video-title">I traveled across Japana with no money!</p>
-        <p class="video-author">Travel Boyz</p>
-        <p class="video-stats">1,2mil.  views - 2 days ago</p>
     </div>
+    
+    <div class="video-details">
+       <img src="pfp01.png" class="channel-picture">
+            <div class="video-info">
+                <p class="video-title">I traveled across Japan with no money!</p>
+                <p class="video-author">Travel Boyz</p>
+                <p class="video-stats">1.2M views • 2 days ago</p>
+            </div>
+    </div>
+  </div>
 
-    <div class="div-preview">
+  <div class="div-preview">
+
+    <div class="video-thumbnail">
         <img src="thumbnail_02.png" class="thumbnail">
-
-        <p class="video-title">Neznicitelne opevnenie Ceskoslovenska!</p>
-        <p class="video-author">Tankista</p>
-        <p class="video-stats">64tis.  views - 1 days ago</p>
     </div>
+    
+    <div class="video-details">
+       <img src="pfp2.png" class="channel-picture">
+            <div class="video-info">
+                <p class="video-title">Ake silne bolo Ceskoslovenske opevneni?</p>
+                <p class="video-author">Tankista</p>
+                <p class="video-stats">641k views • 2 days ago</p>
+            </div>
+    </div>
+  </div>
 
-    <div class="div-preview">
+  <div class="div-preview">
+
+    <div class="video-thumbnail">
         <img src="thumbnail_03.png" class="thumbnail">
-
-        <p class="video-title">Rozdieli medzi USA a Europov</p>
-        <p class="video-author">Kluci z Prahy</p>
-        <p class="video-stats">1,1mil.  views - 1 year ago</p>
     </div>
-
-
-
+    
+    <div class="video-details">
+       <img src="pfp3.png" class="channel-picture">
+            <div class="video-info">
+                <p class="video-title">Rozdili mezi USA a EU!</p>
+                <p class="video-author">Kluci z Prahy</p>
+                <p class="video-stats">800k views • 2 days ago</p>
+            </div>
+    </div>
+  </div>
 </body>
-</html
+</html>

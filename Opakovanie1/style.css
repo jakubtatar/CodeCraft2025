@@ -1,0 +1,32 @@
+.profile-container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    border: 0px solid black;
+    box-shadow: 2px 2px 5px #acacac;
+    margin: 5px 5px;
+    width: 200px;
+}
+
+.profile-mutal-friends{
+    color: rgb(131, 131, 131);
+    margin: 5px 5px;
+}
+
+.add-friend-button{
+    color: white;
+    background-color: rgb(0, 132, 255);
+    border-style: hidden;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px 5px;
+}
+
+.pfp{
+    width: 200px;
+}
+
+.profile-name{
+    margin: 5px 5px;
+    width: 200px;
+}
