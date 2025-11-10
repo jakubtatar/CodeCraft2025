@@ -1,6 +1,5 @@
 .profile-container{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline-block;
     border: 0px solid black;
     box-shadow: 2px 2px 5px #acacac;
     margin: 5px 5px;
@@ -34,5 +33,4 @@
 .pfp-small{
     width: 30px;
     border-radius: 90px;
-    display: inline-block;
 }

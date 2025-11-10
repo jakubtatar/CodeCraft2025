@@ -7,9 +7,8 @@
 
   <style>
     .thumbnail {
-      width: 300px;
-      border-radius: 7px;
-      display: block;
+      width: 100%;
+      border-radius: 15px;
     }
 
     .search-bar {
@@ -19,25 +18,24 @@
     }
 
     .video-title {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       font-weight: bold;
+      font-size: 20px;
       margin: 0;
     }
 
     .video-author, .video-stats {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       color: rgb(122, 122, 122);
       margin: 0px 0;
-      font-size: 12px
-    }
-
-    .div-preview {
-      width: 300px;
-      display: inline-block;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px
     }
 
     .video-details {
-      display: flex;
-      align-items: flex-start;
+      width: 100%;
+      display : grid;
+      grid-template-columns: 40px 1fr;
+      column-gap: 10px;
       margin-top: 8px;
     }
 
@@ -48,13 +46,39 @@
       margin-right: 10px;
     }
 
+    .video-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 15px;
+      row-gap: 30px;
+    }
 
   </style>
 </head>
 <body>
 
-  <input class="search-bar" type="text" placeholder="Search">
 
+  <!-- Top bar -->
+
+  <div class="topbar" style="display: flex; font-size: 18px; justify-content: space-between; align-items: center; height: 50px;">
+    <div style="width: 300px; ">
+      <img src="youtubelogo.png" style="width: 220px;">
+    </div>
+
+    <div style="max-width: 700px; width: 300px; flex: 1;">
+       <input class="search-bar" type="text" placeholder="Search" style="border-radius: 25px; width: 100%;">
+    </div>
+    <div style="width: 300px; justify-content: space-between; display: flex;">
+      <input type="button" value="Create" style="width: 200px; height: 40px; border-radius: 25px; font-size: 100%; font-weight: bold; background-color: black; color: white;">
+      <img src="notifications.png" style="border-radius: 50px; width: 40px;">
+      <img src="pfp06.png" style="border-radius: 50px; width: 40px;">
+    </div>
+ </div>
+
+
+ <!-- Video Grid -->
+
+ <div class="video-grid">
   <div class="div-preview">
 
     <div class="video-thumbnail">
@@ -66,7 +90,7 @@
             <div class="video-info">
                 <p class="video-title">I traveled across Japan with no money!</p>
                 <p class="video-author">Travel Boyz</p>
-                <p class="video-stats">1.2M views • 2 days ago</p>
+                <p class="video-stats">1.2M views • 4 days ago</p>
             </div>
     </div>
   </div>
@@ -82,7 +106,7 @@
             <div class="video-info">
                 <p class="video-title">Ake silne bolo Ceskoslovenske opevneni?</p>
                 <p class="video-author">Tankista</p>
-                <p class="video-stats">641k views • 2 days ago</p>
+                <p class="video-stats">641k views • 6 days ago</p>
             </div>
     </div>
   </div>
@@ -98,9 +122,62 @@
             <div class="video-info">
                 <p class="video-title">Rozdili mezi USA a EU!</p>
                 <p class="video-author">Kluci z Prahy</p>
-                <p class="video-stats">800k views • 2 days ago</p>
+                <p class="video-stats">800k views • 1 days ago</p>
             </div>
     </div>
   </div>
+
+  <div class="div-preview">
+
+    <div class="video-thumbnail">
+        <img src="thumbnail_04.png" class="thumbnail">
+    </div>
+    
+    <div class="video-details">
+       <img src="pfp4.png" class="channel-picture">
+            <div class="video-info">
+                <p class="video-title">Slovakia slander...</p>
+                <p class="video-author">Mizgoo</p>
+                <p class="video-stats">64k views • 16 hours ago</p>
+            </div>
+    </div>
+  </div>
+
+  <div class="div-preview">
+
+    <div class="video-thumbnail">
+        <img src="thumbnail_05.png" class="thumbnail">
+    </div>
+    
+    <div class="video-details">
+       <img src="pfp05.png" class="channel-picture">
+            <div class="video-info">
+                <p class="video-title">My brand new Skoda 120 GLS POV Drive</p>
+                <p class="video-author">Rawcar</p>
+                <p class="video-stats">212k views • 8 days ago</p>
+            </div>
+    </div>
+  </div>
+
+  <div class="div-preview">
+
+    <div class="video-thumbnail">
+        <img src="thumbnail_06.png" class="thumbnail">
+    </div>
+    
+    <div class="video-details">
+       <img src="pfp06.png" class="channel-picture">
+            <div class="video-info">
+                <p class="video-title">#ME na Figu</p>
+                <p class="video-author">Dukok</p>
+                <p class="video-stats">750k views • 1 days ago</p>
+            </div>
+    </div>
+  </div>
+ </div>
+
+
+
+  
 </body>
 </html>
