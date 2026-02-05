@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess the random number, you have 3 attempts!</h1>
+    <button onclick="resetGame()">Reset Game</button>
+    <input type="checkbox" id="hint"><label for="hint">Hint enabled</label>
+    
+
+    <script>
+        function resetGame(){
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            let guess = 0;
+            let attempts = 3;
+
+            isHint = document.getElementById('hint').checked;
+            let isHigherThan5 = false
+
+            if(randomNumber > 5){
+                isHigherThan5 = true;
+            }
+            else if (randomNumber < 5){
+                isHigherThan5 = false;
+            }
+            else{
+                isHigherThan5 = false
+            }
+
+
+            for (let i = 0; i < attempts; i++){
+
+                const input = prompt("Enter a number between 1 and 10:");
+                guess = Number(input);
+            
+                if (randomNumber == guess){
+                    alert("Congratulations! You guessed the number!");
+                    break;
+                }
+                else if (guess < randomNumber && i < attempts - 1){
+                    if (isHint) {
+                        if (isHigherThan5){
+                            alert("Too low! The number is higher than 5.")
+                        }
+                        else{
+                            alert("Too low! The number is lower than 5.")
+                        }
+                    }
+                    else{
+                        alert("Too low! Try again.");
+                    }
+
+                    
+                }
+                else if (guess > randomNumber && i < attempts - 1){
+                    if (isHint) {
+                        if (isHigherThan5){
+                            alert("Too high! The number is higher than 5.")
+                        }
+                        else{
+                            alert("Too high! The number is lower than 5.")
+                        }
+                    }
+                    else{
+                        alert("Too high! Try again.");   
+                    }  
+                }
+            }
+
+            if (randomNumber != guess){
+                alert("Sorry, you've used all attempts! The number was: " + randomNumber);
+            }
+        }
+    </script>
+</body>
+</html>

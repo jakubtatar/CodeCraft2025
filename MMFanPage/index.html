@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICHAL MAŤKO | SUPER NILLA LEGEND</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@900&display=swap');
+
+        :root {
+            --nilla-gold: #ffcc00;
+            --roblox-red: #ff0000;
+            --hyper-blue: #00fbff;
+            --bg-dark: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Animované neónové pozadie */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            position: relative;
+            border-bottom: 10px solid var(--nilla-gold);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.2;
+        }
+
+        .main-photo {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border: 8px solid var(--nilla-gold);
+            border-radius: 20px;
+            box-shadow: 0 0 50px var(--nilla-gold), 0 0 20px white;
+            z-index: 2;
+            transform: rotate(-2deg);
+            transition: 0.3s;
+        }
+
+        .main-photo:hover {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 6rem;
+            margin: 20px 0;
+            color: white;
+            text-shadow: 5px 5px 0px var(--roblox-red), 10px 10px 0px var(--hyper-blue);
+            z-index: 2;
+            letter-spacing: 5px;
+        }
+
+        .super-nilla-tag {
+            background: var(--nilla-gold);
+            color: black;
+            padding: 10px 30px;
+            font-size: 2rem;
+            font-weight: 900;
+            transform: skew(-15deg);
+            box-shadow: 5px 5px 0px white;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #111;
+            border: 2px solid #333;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            border-color: var(--hyper-blue);
+            box-shadow: 0 0 30px var(--hyper-blue);
+        }
+
+        .card h2 {
+            color: var(--nilla-gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .aura-meter {
+            width: 100%;
+            height: 30px;
+            background: #222;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 2px solid white;
+        }
+
+        .aura-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--roblox-red), var(--nilla-gold), var(--hyper-blue));
+            border-radius: 13px;
+            animation: fillUp 2s ease-out;
+        }
+
+        @keyframes fillUp {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        .footer-banner {
+            background: var(--roblox-red);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn-robux {
+            background: white;
+            color: black;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 900;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-robux:hover {
+            background: var(--hyper-blue);
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="super-nilla-tag">ULTIMÁTNY SUPER NILLA HRÁČ</div>
+        <img src="https://api.sportnet.online/v1/ppo/futbalsfz.sk/users/631224be677da94122aa46f6/formal-photo/60acf35a-f2e7-4d04-b14a-3d91946f1b53" alt="Michal Maťko" class="main-photo">
+        <h1>MICHAL MAŤKO</h1>
+        <p style="font-size: 1.5rem; z-index: 2;">👑 Master of 99 Nights | Roblox God Mode: <b>ON</b></p>
+    </section>
+
+    <div class="grid-container">
+        <div class="card">
+            <h2>SUPER NILLA SKILL</h2>
+            <p>Keď Michal vstúpi do lesa, stromy mu uhýbajú z cesty. 99 nocí pre neho nie je výzva, ale rozcvička pred raňajkami.</p>
+        </div>
+
+        <div class="card">
+            <h2>STATY LEGENDY</h2>
+            <p><b>Robuxy:</b> Nekonečno<br>
+            <b>Spánok:</b> Čo to je?<br>
+            <b>Aura:</b> Maximálna</p>
+            <div class="aura-meter">
+                <div class="aura-fill"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>HERNÝ ŠTÝL</h2>
+            <p>Absolútna dominancia. Michal nepoužíva cheaty, on JE cheat. Super Nilla energia mu prúdi v žilách namiesto krvi.</p>
+        </div>
+    </div>
+
+    <div class="footer-banner">
+        CHCĚŠ BYŤ AKO ON? SMOLA, MICHAL JE LEN JEDEN.<br>
+        <a href="#" class="btn-robux">VSTÚPIŤ DO JEHO KRÁĽOVSTVA</a>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; opacity: 0.5;">
+        OFFICIAL SUPER NILLA FANPAGE 2026 | BUILT FOR THE GOAT
+    </footer>
+
+</body>
+</html>
