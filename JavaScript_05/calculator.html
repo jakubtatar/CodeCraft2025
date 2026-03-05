@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Calculator">
+        <div class="Calculator-Window">
+            <h2 id="display">0</h2>
+        </div>
+        <div class="Calculator-Buttons">
+            <div class="Numbers">
+                <button class="Calculator-Button" onclick="addNumber(7)" id="bt7">7</button>
+                <button class="Calculator-Button" onclick="addNumber(8)" id="bt8">8</button>
+                <button class="Calculator-Button" onclick="addNumber(9)" id="bt9">9</button>
+                <button class="Calculator-Button" onclick="addOperation('+')" id="btPlus">+</button>
+                <button class="Calculator-Button" onclick="addNumber(4)" id="bt4">4</button>
+                <button class="Calculator-Button" onclick="addNumber(5)" id="bt5">5</button>
+                <button class="Calculator-Button" onclick="addNumber(6)" id="bt6">6</button>
+                <button class="Calculator-Button" onclick="addOperation('-') "id="btMinus">-</button>
+                <button class="Calculator-Button" onclick="addNumber(1)" id="bt1">1</button>
+                <button class="Calculator-Button" onclick="addNumber(2)" id="bt2">2</button>
+                <button class="Calculator-Button" onclick="addNumber(3)" id="bt3">3</button>
+                <button class="Calculator-Button" onclick="addOperation('*') "id="btKrat">*</button> 
+                <button class="Calculator-Button" onclick="ResetCalculator()" id="btC">C</button>
+                <button class="Calculator-Button" onclick="addNumber(0)" id="bt0">0</button>
+                <button class="Calculator-Button" onclick="addOperation('/') "id="btDeleno">/</button>
+                <button class="Calculator-Button" onclick="calculate()" id="btCalculate">=</button>
+                
+            </div>
+                
+        </div>
+    </div>
+    <button class="Calculator-History" onclick="showHistory()" id="btHistory">History</button>
+    <h4 class="history" id="history"></h4>
+    <script src="calculator.js"></script>
+</body>
+</html>
