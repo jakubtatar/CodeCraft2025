@@ -81,6 +81,10 @@ function calculate(){
     }
 
     display.textContent = result
+
+    isHistoryDisplayed = false;
+    showHistory();
+    
     num1String = ""
     num2String = ""
     isNum1 = false
@@ -109,3 +113,5 @@ function showHistory(){
         isHistoryDisplayed = false
     }
 }
+
+
